@@ -2,6 +2,16 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
+   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'qxslfhfohjcwdmqgyewt.supabase.co',
+        port: '',
+        pathname: '/storage/v1/object/public/cabin-images/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
