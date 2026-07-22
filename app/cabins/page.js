@@ -1,8 +1,10 @@
-import CabinCard from "@/app/_components/CabinCard";
-import { getCabins } from "../_lib/data-service";
-import CabinList from "../_components/CabinList";
 import { Suspense } from "react";
+import CabinList from "../_components/CabinList";
 import Spinner from "../_components/Spinner";
+import Counter from "../_components/Counter";
+
+export const revalidate = 3600;
+// export const revalidate = 15;
 
 export const metadata = {
   title: "Cabins",

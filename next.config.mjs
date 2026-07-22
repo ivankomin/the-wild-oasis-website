@@ -2,13 +2,13 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
-   images: {
+  images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'qxslfhfohjcwdmqgyewt.supabase.co',
-        port: '',
-        pathname: '/storage/v1/object/public/cabin-images/**',
+        protocol: "https",
+        hostname: "qxslfhfohjcwdmqgyewt.supabase.co",
+        port: "",
+        pathname: "/storage/v1/object/public/cabin-images/**",
       },
     ],
   },
