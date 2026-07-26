@@ -140,10 +140,18 @@ export async function getSettings() {
 export async function getCountries() {
   try {
     const res = await fetch(
-      "https://restcountries.com/v2/all?fields=name,flag",
+      "https://api.restcountries.com/countries/v5?response_fields=names.common,flag.emoji&pretty",
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.NEXT_PUBLIC_COUNTRIES_API_KEY,
+        },
+      },
     );
     const countries = await res.json();
-    return countries;
+    return countries.data.objects.map((country) => ({
+      name: country.names.common,
+      flag: country.flag.emoji,
+    }));
   } catch {
     throw new Error("Could not fetch countries");
   }
